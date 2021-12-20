@@ -15,95 +15,86 @@
 
     <title>Registro</title>
   </head>
+  
+  
+  
   <body >
     <div class="container">
         
-      <h1 >Registro</h1>
-      <form id="registro-px">
-<!-- clase mb de bootstrap para dar saltos de linea -->
-<div class="mb-3">
-  <div class="mb-3">
-    <label for="CUI" class="form-label">Ingrese CUI del Px </label>
-    <input type="number" class="form-control" placeholder="Ingrese CUI" id="CUI"/>
-  </div>
+      <h1 >Registro Paciente Nuevo</h1>
+      <form id="registro-px" class="row g-3">
 
-  <div class="mb-3">
-    <label for="nombre" class="form-label">Ingrese Nombre del Px</label>
-    <input type="text" class="form-control" placeholder="Ingrese Nombre " id="nombre"/>
-  </div>
+        <div class="col-md-4">
+          <label for="CUI" class="form-label">CUI</label>
+          <input type="number" class="form-control " id="CUI" required>
+          <div class="valid-feedback">
+            !
+          </div>
+        </div>
 
-  <div class="mb-3">
-    <label for="apellido" class="form-label">Ingrese Apellido del Px</label>
-    <input type="text" class="form-control" placeholder="Ingresa Apellido" id="apellido"/>
-  </div>
+        <div class="col-md-4">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+          <div class="valid-feedback">
+            Genial!
+          </div>
+        </div>
 
-  <div class="mb-3">
-    <label for= 'edad' class="form-label">Ingrese Edad del Px</label>
-    <input type="number" class="form-control" placeholder="Ingrese Edad" id="edad">
-  </div>
+        <div class="col-md-4">
+          <label for="Apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" required>
+          <div class="valid-feedback">
+            Genial!
+          </div>
+        </div>
 
-  <div class="mb-3">
-    <label for="fechaNacimiento" class="form-label">Ingrese Fecha nacimiento Px</label>
-    <input type="date" class="form-control" placeholder="Fecha de nacimiento" id="fechaNacimiento"/>
-  </div>
+        <div class="col-md-4">
+          <label for="edad" class="form-label">Edad</label>
+          <input type="number" class="form-control" id="edad" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
 
-  <div class="mb-3">
-    <label for="direccion" class="form-label">Dirección del Px</label>
-    <input type="text" class="form-control" placeholder="Dirección" id="direccion"/>
-  </div>
-
-
-  <!--
-  <div class="mb3">
-  <label for="correoElectronico" class="form-label">Ingrese Correo Electronico</label>
-  <input type="email" class="form-control" placeholder="Ingresa tu correo " id="correoElectronico" aria-describedby="emailHelp"/>
-  <div id="emailHelp" class="form-text"> No compartiremos tu dirección con nadie </div>
-
-  <div class="row g-3 align-items-center"> 
-  <div class="col-auto">
-      <label for="contrasenia" class="col-form-label">Contraseña</label>
-    </div>
-    <div class="col-auto">
-      <input type="password" id="contrasenia" class="form-control" aria-describedby="mensajeContrasenia">
-    </div>
-    <div class="col-auto">
-      <span id="mensajeContrasenia" class="form-text"> Ulitiza entre 6 y 8 caracteres. </span>
-    </div>
-  </div>
-
-    <div class="row g-3 align-items-center">
-    <div class="col-auto">
+        <div class="col-md-4">
+          <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" id="fechaNacimiento" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
         
-      <label for="confirmarContrasenia" class="col-form-label">Contraseña</label>
-    </div>
-    <div class="col-auto">
-      <input type="password" id="contraseniaConfirmar" class="form-control" aria-describedby="passwordHelpInline">
-    </div>
-    <div class="col-auto">
-      <span id="confirmarContrasenia" class="form-text">
-        Debes confirmar tu contraseña
-      </span>
-    </div>
-  </div>
 
-      <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
-  </div>
+        <div class="col-md-3">
+          <label for="genero" class="form-label">Genero</label>
+          <select class="form-select" id="genero" aria-describedby="validacionGenero" required>
+            <option selected disabled value="">Elegir</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+            <option>No binario</option>
+          </select>
+          <div id="validacionGenero" class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
 
-</div>-->
+        <div class="col-md-6">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input type="text" class="form-control " id="direccion" aria-describedby="validacionDireccion" required>
+          <div id="validacionDireccion" class="invalid-feedback">
+            Porfavor ingrese su dirección
+          </div>
+        </div>
+        </div>
       </form>
-
-
-      <button type="button" class="btn btn-success mb-3" onclick="registrar()">Registrar Paciente</button>
+      <button type="button" class="btn btn-success mb-3" onclick="registrarPaciente()">Registrar Usuario</button>
       <div id="mensaje"></div>
-    </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
     <script src="/js/ingresar-px.js"></script>
+    
   </body>
 </html>
