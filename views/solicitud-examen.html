@@ -14,7 +14,7 @@
     />
     <link href="/css/login.css" rel="stylesheet"/>
 
-    <title>Login</title>
+    <title>Solicitud Examen</title>
   </head>
   <body style="color: brown;" aria-colcount="anonymous" >
     <!-- clase container para darle vistosidad -->
@@ -22,7 +22,35 @@
       <h1>Login</h1>
       
       <form id='solicitudExamen'>
+
+        <div class="col-md-4">
+          <label for="CUI-User" class="form-label">CUI del paciente</label>
+          <input type="number" class="form-control " id="CUI-User" required>
+          <div class="valid-feedback">
+            !
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+          <div class="valid-feedback">
+            Genial!
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" required>
+          <div class="valid-feedback">
+            Genial!
+          </div>
+        </div>
+
       </form>
+
+
+
       <button type="button" class="btn btn-success mb-3" onclick="login()">Registrar Usuario</button>
       <div id="mensaje"></div>
     </div>
@@ -31,6 +59,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/login.js"></script>
+    <script src="/js/solicitud.js"></script>
   </body>
 </html>
