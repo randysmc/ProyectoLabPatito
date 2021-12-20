@@ -1,11 +1,24 @@
-console.log("Aplicacion de control de personas desde js");
+function login(){
+    const tipoUser = document.getElementById('tipoUsuario');
+    let cargo = tipoUser['cargo'];
+    let usuario = tipoUser['usuario'];
+    let contrasenia = tipoUser['contrasenia'];
 
-function saludar(){
-    const login = document.getElementById('login');
-    let nombre = login['nombre'];
-    let correoElectronico = login['correoElectronico'];
-    let constrasenia = login['contrasenia'];
-    let saludo = "Hola " + nombre.value + " Bienvenido";
-    console.log(saludo);
-    document.getElementById('mensaje').innerHTML = saludo;
+    console.log(cargo.value);
+
+    if((cargo.value == '') || (usuario.value == '')){
+        console.log('Por favor rellene todos los campos');
+    }
+    else{
+        if(cargo.value == 'Administrador'){
+            console.log('Bienvenido: ' + usuario.value + ' Tiene el cargo de administrador');
+        }
+        else if(cargo.value == 'Secretaria'){
+            console.log('Bienvenido: ' + usuario.value + ' Tiene el cargo de Secretaria');
+        }
+        else{
+            console.log('Bienvenido: ' + usuario.value + ' Tiene el cargo de Laboratorista');
+        }
+    }
+
 }
