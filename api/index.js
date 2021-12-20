@@ -17,26 +17,32 @@ app.use('/css', express.static(__dirname+'/public/css'));
 app.use('/js', express.static(__dirname+'/public/js'));
 //endpoints reglas, punto a conectarse en una api
 
+
+//esta es nuestra ruta inicial
 app.get('/' , (req , res)=>{
 
    res.status(201).sendFile(path.join(__dirname,'../views/index.html'));
 });
 
+//esta ruta nos muestra el login
 app.get('/login' , (req , res)=>{
 
    res.status(201).sendFile(path.join(__dirname,'../views/login.html'));
 });
 
+//esta ruta nos muestra el formulario para ingresar paciente
 app.get('/ingresar-px' , (req , res)=>{
 
    res.status(201).sendFile(path.join(__dirname,'../views/ingresar-px.html'));
 });
 
+//esta ruta nos muestra el formulario para ingresar resultados de un examen
 app.get('/ingresar-resultados' , (req , res)=>{
 
    res.status(201).sendFile(path.join(__dirname,'../views/ingresar-resultados.html'));
 });
 
+//esta ruta nos muestra el formulario para una solicitud de examen
 app.get('/solicitud-examen' , (req , res)=>{
 
    res.status(201).sendFile(path.join(__dirname,'../views/solicitud-examen.html'));
