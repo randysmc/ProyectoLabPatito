@@ -21,16 +21,30 @@ function registrarPaciente(){
         console.log('Usuario creado con exito!');
         console.log('Bienvenido: ' +nombre.value + ' ' + apellido.value);
     }
-
-/*
-    if(contrasenia.value == confContrasenia.value){
-        console.log("Bienvenido, usuario creado correctamente");
-        let saludo = "Hola " + nombre.value + " Bienvenido, has ingresado correctamente tu usuario";
-        console.log(saludo);
-
-    }
-    else if(contrasenia != confContrasenia){
-        console.log("Las contraseñas no son iguales, intente de nuevo");
-    }*/
     //document.getElementById('mensaje').innerHTML = saludo;
+}
+
+function tipoUsuario(){
+    const tipoUser = document.getElementById('tipoUsuario');
+    let cargo = tipoUser['cargo'];
+    let usuario = tipoUser['usuario'];
+    let contrasenia = tipoUser['contrasenia'];
+
+    console.log(cargo.value);
+
+    if((cargo.value == '') || (usuario.value == '')){
+        console.log('Por favor rellene todos los campos');
+    }
+    else{
+        if(cargo.value == 'Administrador'){
+            console.log('Bienvenido: ' + usuario.value + ' Tiene el cargo de administrador');
+        }
+        else if(cargo.value == 'Secretaria'){
+            console.log('Bienvenido: ' + usuario.value + ' Tiene el cargo de Secretaria');
+        }
+        else{
+            console.log('Bienvenido: ' + usuario.value + ' Tiene el cargo de Laboratorista');
+        }
+    }
+
 }
