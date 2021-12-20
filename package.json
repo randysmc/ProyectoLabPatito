@@ -1,0 +1,25 @@
+{
+  "name": "iteracion2",
+  "version": "1.0.0",
+  "description": "vistas, endpoints, y funciones de la aplicacion",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./api/index.js",
+    "dev": "nodemon ./api/index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "html",
+    "javascript",
+    "css"
+  ],
+  "author": "Randy <randy26smc@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
