@@ -48,6 +48,23 @@ app.get('/solicitud-examen' , (req , res)=>{
    res.status(201).sendFile(path.join(__dirname,'../views/solicitud-examen.html'));
 });
 
+//ruta que nos manda a la secretaria
+app.get('/secretaria' , (req , res)=>{
+
+   res.status(201).sendFile(path.join(__dirname,'../views/secretaria.html'));
+});
+
+//ruta que nos manda a laboratorista
+app.get('/laboratorista' , (req , res)=>{
+
+   res.status(201).sendFile(path.join(__dirname,'../views/laboratorista.html'));
+});
+
+//ruta que nos manda a administrador
+app.get('/administrador' , (req , res)=>{
+
+   res.status(201).sendFile(path.join(__dirname,'../views/administrador.html'));
+});
 
 //escuchando en el puerto
 app.listen(port , ()=> console.log('> Server is up and running on port : ' + port))
