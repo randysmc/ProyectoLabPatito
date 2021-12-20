@@ -16,20 +16,45 @@ app.use(express.static('public'));
 app.use('/css', express.static(__dirname+'/public/css'));
 app.use('/js', express.static(__dirname+'/public/js'));
 //endpoints reglas, punto a conectarse en una api
+
 app.get('/' , (req , res)=>{
 
-   console.log();
    res.status(201).sendFile(path.join(__dirname,'../views/index.html'));
 });
 
-app.get('/hola', (req, res)=>{
+app.get('/login' , (req , res)=>{
+
+   res.status(201).sendFile(path.join(__dirname,'../views/login.html'));
+});
+
+app.get('/ingresarpx' , (req , res)=>{
+
+   res.status(201).sendFile(path.join(__dirname,'../views/ingresarpx.html'));
+});
+
+app.get('/ingresoresultados' , (req , res)=>{
+
+   res.status(201).sendFile(path.join(__dirname,'../views/ingresores.html'));
+});
+
+app.get('/solicitudex' , (req , res)=>{
+
+   res.status(201).sendFile(path.join(__dirname,'../views/solicitudex.html'));
+});
+
+
+
+
+
+/*
+app.get('/ingresarpx', (req, res)=>{
 
    //res.send('hello from simple server :)')
    res.status(201).json({
     res: "Hola"
 })
     
-});
+});*/
 
 //escuchanod en el puerto
 app.listen(port , ()=> console.log('> Server is up and running on port : ' + port))
