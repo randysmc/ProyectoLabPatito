@@ -5,7 +5,7 @@ const path = require('path');
 //genero una constante app, instancia de express
 const app = express();
 
-//require('dotenv').config()
+
 //variables de entorno
 const port = process.env.PORT || 5000;
 //app.set('view engine', 'engine')
@@ -27,34 +27,21 @@ app.get('/login' , (req , res)=>{
    res.status(201).sendFile(path.join(__dirname,'../views/login.html'));
 });
 
-app.get('/ingresarpx' , (req , res)=>{
+app.get('/ingresar-px' , (req , res)=>{
 
-   res.status(201).sendFile(path.join(__dirname,'../views/ingresarpx.html'));
+   res.status(201).sendFile(path.join(__dirname,'../views/ingresar-px.html'));
 });
 
-app.get('/ingresoresultados' , (req , res)=>{
+app.get('/ingresar-resultados' , (req , res)=>{
 
-   res.status(201).sendFile(path.join(__dirname,'../views/ingresores.html'));
+   res.status(201).sendFile(path.join(__dirname,'../views/ingresar-resultados.html'));
 });
 
-app.get('/solicitudex' , (req , res)=>{
+app.get('/solicitud-examen' , (req , res)=>{
 
-   res.status(201).sendFile(path.join(__dirname,'../views/solicitudex.html'));
+   res.status(201).sendFile(path.join(__dirname,'../views/solicitud-examen.html'));
 });
 
 
-
-
-
-/*
-app.get('/ingresarpx', (req, res)=>{
-
-   //res.send('hello from simple server :)')
-   res.status(201).json({
-    res: "Hola"
-})
-    
-});*/
-
-//escuchanod en el puerto
+//escuchando en el puerto
 app.listen(port , ()=> console.log('> Server is up and running on port : ' + port))
