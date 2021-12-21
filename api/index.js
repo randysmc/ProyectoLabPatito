@@ -48,6 +48,11 @@ app.get('/solicitud-examen' , (req , res)=>{
    res.status(201).sendFile(path.join(__dirname,'../views/solicitud-examen.html'));
 });
 
+app.get('/imprimir-resultados' , (req , res)=>{
+
+   res.status(201).sendFile(path.join(__dirname,'../views/imprimir.html'));
+});
+
 //ruta que nos manda a la secretaria
 app.get('/secretaria' , (req , res)=>{
 

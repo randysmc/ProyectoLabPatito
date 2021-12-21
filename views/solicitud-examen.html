@@ -46,24 +46,22 @@
             Genial!
           </div>
         </div>
+        <div class="col-md-3">
+          <label for="tipoExamen" class="form-label">Tipo de Examen</label>
+          <select class="form-select" id="tipoExamen" aria-describedby="validacionExamen" required>
+            <option selected disabled value="">Elegir</option>
+            <option>Hematologia</option>
+            <option>Orina</option>
+            <option>Heces</option>
+          </select>
+          <div id="validacionTipoUsuario" class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
 
       </form>
-      <div class="col-md-3">
-        <label for="tipoExamen" class="form-label">Tipo de Usuario</label>
-        <select class="form-select" id="tipoExamen" aria-describedby="validacionExamen" required>
-          <option selected disabled value="">Elegir</option>
-          <option>Hematologia</option>
-          <option>Orina</option>
-          <option>Heces</option>
-        </select>
-        <div id="validacionTipoUsuario" class="invalid-feedback">
-          Please select a valid state.
-        </div>
-      </div>
-
-
-
-      <button type="button" class="btn btn-success mb-3" onclick="ingresarSolicitud()">Registrar Solicitud</button>
+ 
+      <button type="button" class="btn btn-success mb-3" onclick="registrarSolicitud()">Registrar Solicitud</button>
       <div id="mensaje"></div>
     </div>
     <script
