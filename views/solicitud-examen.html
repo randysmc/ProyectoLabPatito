@@ -16,10 +16,10 @@
 
     <title>Solicitud Examen</title>
   </head>
-  <body style="color: brown;" aria-colcount="anonymous" >
+  <body style="color: rgb(54, 2, 2);" aria-colcount="anonymous" >
     <!-- clase container para darle vistosidad -->
     <div class="container">
-      <h1>Login</h1>
+      <h1>Solicitud de Examen</h1>
       
       <form id='solicitudExamen'>
 
@@ -32,7 +32,7 @@
         </div>
 
         <div class="col-md-4">
-          <label for="nombre" class="form-label">Nombre</label>
+          <label for="nombre" class="form-label">Nombre del paciente</label>
           <input type="text" class="form-control" id="nombre" required>
           <div class="valid-feedback">
             Genial!
@@ -40,18 +40,30 @@
         </div>
 
         <div class="col-md-4">
-          <label for="apellido" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="apellido" required>
+          <label for="fechaGeneracion" class="form-label">Fecha de Generación</label>
+          <input type="date" class="form-control" id="fechaGeneracion" required>
           <div class="valid-feedback">
             Genial!
           </div>
         </div>
 
       </form>
+      <div class="col-md-3">
+        <label for="tipoExamen" class="form-label">Tipo de Usuario</label>
+        <select class="form-select" id="tipoExamen" aria-describedby="validacionExamen" required>
+          <option selected disabled value="">Elegir</option>
+          <option>Hematologia</option>
+          <option>Orina</option>
+          <option>Heces</option>
+        </select>
+        <div id="validacionTipoUsuario" class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
 
 
 
-      <button type="button" class="btn btn-success mb-3" onclick="login()">Registrar Usuario</button>
+      <button type="button" class="btn btn-success mb-3" onclick="ingresarSolicitud()">Registrar Solicitud</button>
       <div id="mensaje"></div>
     </div>
     <script
