@@ -55,118 +55,52 @@ class Persona{
 //Administrador
 
 
-class Administrador extends Persona{
-    constructor(DPI, nombre, apellido,){
+class Cliente extends Persona{
+    constructor(DPI, nombre, apellido,telefono, correo, direccion, NIT){
         super(DPI, nombre, apellido);
-        this._departamento = departamento;
-    }
-
-    //Sobreescritura, modifica el comportamiento de una funcion de clase padre
-    nombreCompleto(){
-        return super.nombreCompleto()+ ' Soy un admin' ;
-    }
-}
-
-
-//Secretaria
-
-class Secretaria extends Persona{
-    constructor(DPI, nombre, apellido,){
-        super(DPI, nombre, apellido);
-        this._departamento = departamento;
-    }
-
-    //Sobreescritura, modifica el comportamiento de una funcion de clase padre
-    nombreCompleto(){
-        return super.nombreCompleto()+ ' Soy una Secretaria' ;
-    }
-}
-
-
-//Medico
-class Medico extends Persona{
-    constructor(DPI, nombre, apellido,colegiado){
-        super(DPI, nombre, apellido);
-        this._colegiado = colegiado;
-    }
-
-    get colegiado(){
-        return this._colegiado;
-    }
-
-    set colegiado(colegiado){
-        this._colegiado = colegiado;
-    }
-
-
-    //Sobreescritura, modifica el comportamiento de una funcion de clase padre
-    nombreCompleto(){
-        return super.nombreCompleto()+ ' Soy un medico, mi colegiado es: '+ this._colegiado ;
-    }
-}
-
-
-//
-class laboratorista extends Persona{
-    constructor(DPI, nombre, apellido){
-        super(DPI, nombre, apellido);
+        this._telefono = telefono;
+        this._correo = correo;
+        this._direccion = direccion;
+        this._NIT = NIT;
         
     }
 
     //Sobreescritura, modifica el comportamiento de una funcion de clase padre
     nombreCompleto(){
-        return super.nombreCompleto()+ ' Soy un laboratorista' ;
+        return super.nombreCompleto()+ ' Soy un cliente' ;
     }
 }
 
-class Paciente extends Persona{
-    static contadorPacientes=0;
-    constructor(DPI, nombre, apellido, id, edad, departamento, fechaNacimiento, genero, telefono ){
+class Empleado extends Persona{
+    constructor(DPI, nombre, apellido, tipoPuesto, usuario, password, id){
         super(DPI, nombre, apellido);
-        this._edad = edad;
-        this._departamento = departamento;
-        this._fechaNacimiento = fechaNacimiento;
-        this._genero = genero;
-        this._telefono =telefono;
-        id = ++contadorPacientes;
+        this._tipoPuesto = tipoPuesto;
+        this._usuario = usuario;
+        this.password = password;
 
+        
     }
 
-    get edad(){
-        return this._edad;
-    }
-
-    set edad(edad){
-        this._edad = edad;
-    }
-
-    get fechaNacimiento(){
-        return this._fechaNacimiento;
-    }
-
-    set fechaNacimiento(fechaNacimiento){
-        this._fechaNacimiento = fechaNacimiento;
-    }
-
-    get departamento(){
-        return this._departamento;
-    }
-
-    set departamento(departamento){
-        this._departamento = departamento;
-    }
-    get genero(){
-        return this._genero;
-    }
-
-    set genero(genero){
-        this._genero = genero ;
-    }
-    get telefono(){
-        return this._telefono;
-    }
-
-    set telefono(telefono){
-        this._telefono = telefono;
+    //Sobreescritura, modifica el comportamiento de una funcion de clase padre
+    nombreCompleto(){
+        return super.nombreCompleto()+ ' Soy un empleado' ;
     }
 }
+
+class Medico extends Persona{
+    constructor(DPI, nombre, apellido,colegiado, id){
+        super(DPI, nombre, apellido);
+        this._colegiado = colegiado;
+        this._id = id;
+
+        
+    }
+
+    //Sobreescritura, modifica el comportamiento de una funcion de clase padre
+    nombreCompleto(){
+        return super.nombreCompleto()+ ' Soy un medico' ;
+    }
+}
+
+
+
