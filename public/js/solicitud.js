@@ -1,4 +1,4 @@
-function registrarSolicitud(){
+/*function registrarSolicitud(){
 
     const solicitud = document.getElementById('solicitudExamen');
     let CUI = document.getElementById('CUI-User')
@@ -17,4 +17,4 @@ function registrarSolicitud(){
         console.log("Se ha procesado la solicitud para el px: " +nombre.value );
         
     }
-}
+}*/
